@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,12 +10,32 @@
     <title>Title</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link type="text/css" rel="stylesheet" href="styles/main-style.css">
+    <link type="text/css" href="styles/normalize.css" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="lg"></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="links">
+                <a href="o-nas.html" class="active">DOMŮ</a>
+                <a href="chov.html">SLUŽBY</a>
+                <a href="Katalog.html">REFERENCE</a>
+                <a href="Katalog.html">O NÁS</a>
+                <a href="kontakty.html">KONTAKT</a>
+            </div>
         </nav>
+        <div class="header-welcome-info">
+            <p class="header-welcome-info-name">HM Building.cz s.r.o.</p>
+            <p class="header-welcome-info-desc">liberecká stavební společnost</p>
+            <a class="header-welcome-info-btn">
+                <span>pokračovat</span><img src="media/arrow_back_ios_24px_outlined.svg" style="transform: rotate(-0.25turn)">
+            </a>
+        </div>
     </header>
 
     <footer>
@@ -24,4 +45,5 @@
             Nezávazně poptat
         </a>
     </footer>
+
 </body></html>
