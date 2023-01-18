@@ -1,1 +1,1 @@
-odkaz [moji stranku](https://pslib-cz.github.io/2022-p2b-web-hm-building-ISEEYABOIII/)
+odkaz na [moji stranku](https://pslib-cz.github.io/2022-p2b-web-hm-building-ISEEYABOIII/)

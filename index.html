@@ -17,11 +17,14 @@
 <body>
     <header>
         <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="lg"></a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <div class="links">
+            <div class="topnav-info">
+                <a href="index.html" class="lg"></a>
+                <a class="icon" onclick="myFunction()" id="menu">
+                    <p class="topnav-info-menu">MENU</p>
+                    <img src="media/lines.svg" style="height: 50px; width: 50px;">
+                </a>
+            </div>
+            <div class="links" id="menu-inside">
                 <a href="o-nas.html" class="active">DOMŮ</a>
                 <a href="chov.html">SLUŽBY</a>
                 <a href="Katalog.html">REFERENCE</a>
@@ -37,6 +40,15 @@
             </a>
         </div>
     </header>
+    <main class="content-wrapper">
+        <div class="content-wrapper-info">
+            <h2 class="content-wrapper-info-h">Využijte škálu našich <span class="orange">služeb</span></h2>
+            <p class="content-wrapper-info-p">Ačkoliv provádíme především <b>průmyslové</b> stavby, není pro nás problém postavit Vám <b>rodinný domek na klíč</b>, nebo jen hrubou stavbu. Nejsou nám cizí ani <b>rekonstrukce budov</b> a jejich údržba a to včetně okolních ploch.</p>
+        </div>
+        <div class="content-wrapper-combs">
+
+        </div>
+    </main>
 
     <footer>
         <p class="ftr-1st-text">Plácneme si pro Váš projekt?</p>
@@ -46,4 +58,23 @@
         </a>
     </footer>
 
+
+    <script>
+        var menuIcon = document.getElementById("menu")
+        menuIcon.addEventListener('click', function() {
+            if (document.getElementById("menu-inside").style.display == "flex") {
+                document.getElementById("menu-inside").style.display = "none";
+            } else {
+                document.getElementById("menu-inside").style.display = "flex";
+            }
+        })
+
+        window.addEventListener('click', function(e) {
+            if (document.getElementById("menu-inside").style.display == "flex" &&
+                e.target.id != "menu-inside" &&
+                e.target.id != "menu") {
+                document.getElementById("menu-inside").style.display = "none";
+            }
+        })
+    </script>
 </body></html>
