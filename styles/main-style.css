@@ -136,6 +136,11 @@ header {
     height: 50vh;
 }
 
+.no-header {
+    background-image: none;
+    height: 15vh;
+}
+
 .header-welcome-info {
     text-align: center;
     color: white;
@@ -161,11 +166,15 @@ header {
     padding: 0.2em 0 1em;
 }
 
-
 @media screen and (min-width: 850px) {
 
     header {
         height: 100vh;
+    }
+
+    .no-header {
+        background-image: radial-gradient(transparent, rgb(0, 0, 0, 0.6)), url(../media/pageheader-1920w.jpg);
+        height: 18vh;
     }
 
     .header-welcome-info {
@@ -204,7 +213,6 @@ content wrapper
 .content-wrapper {
     display: grid;
     grid-auto-columns: 10% 80% 10%;
-    grid-auto-rows: 320px;
     justify-content: center;
     text-align: left;
     padding-top: 2em;
@@ -215,12 +223,12 @@ content wrapper
     grid-column: 1/4;
     padding: 0 10%;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
 
 .content-wrapper-info-h {
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .content-wrapper-info-p {
@@ -228,25 +236,29 @@ content wrapper
     font-size: 1.15em;
 }
 
+.content-wrapper-combs {
+    grid-column: 2/3;
+    padding: 1em 0;
+}
+
 .content-wrapper-combs__img {
-    height: 100%;
+    height: 310px;
     width: 100%;
     object-fit: cover;
     border-radius: 0 30px;
-    grid-column: 2/3;
 }
 
 .content-wrapper-combes__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    grid-column: 2/3;
+    width: 100%;
 }
 
 .content-wrapper-combs__header {
-    text-transform: uppercase;
     font-weight: 700;
     font-size: 1.5em;
+    text-transform: capitalize;
 }
 
 .content-wrapper-combs__desc {
@@ -286,15 +298,54 @@ content wrapper
     font-size: 1.2em;
 }
 
+.content-wrapper-reference {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper-reference-item {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.content-wrapper-reference-item__img {
+    width: 100%;
+}
+
+.content-wrapper-reference-item__header {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+.content-wrapper-reference-item__p {
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0.5em 0 2em;
+}
+
+.content-wrapper__list {
+    grid-column: 2/3;
+    font-weight: 300;
+    font-size: 1.15em;
+    color: var(--orange);
+    margin: 0;
+    line-height: 2em;
+    text-align: left;
+    margin-left: -1em;
+}
+
+.content-wrapper__list span {
+    color: black;
+}
+
 @media screen and (min-width: 850px) {
-    .content-wrapper {
-        display: grid;
-        grid-auto-columns: 10% 38% 4% 38% 10%;
-    }
 
     .content-wrapper-info {
-        grid-column: 1/6;
         padding: 0 10%;
+        text-align: center;
     }
 
     .content-wrapper-info-h {
@@ -305,16 +356,23 @@ content wrapper
         font-size: 1.5em;
     }
 
-    .content-wrapper-combs__img {
-        grid-column: 2/3;
+    .content-wrapper-combs {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
     }
 
-    .content-wrapper-combes__text {
-        grid-column: 4/5;
+    .content-wrapper-combs:nth-child(odd) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .content-wrapper-combs__header {
+        text-transform: uppercase;
     }
 
     .content-wrapper-infostoppper {
-        grid-column: 1/6;
+        grid-column: 1/4;
         padding: 5% 10%;
     }
 
@@ -327,6 +385,37 @@ content wrapper
         font-size: 1.2em;
     }
 
+    .content-wrapper-reference {
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .content-wrapper-reference-item {}
+
+    .content-wrapper-reference-item:hover {}
+
+    .content-wrapper-reference-item__header {
+        display: none;
+    }
+
+    .content-wrapper-reference-item__header:hover {}
+
+    .content-wrapper-reference-item__p {
+        display: none;
+    }
+
+    .content-wrapper-reference-item__p:hover {}
+
+    .content-wrapper__list {
+        margin-left: 5em;
+        font-size: 1.5em;
+    }
+
+    .content-wrapper-info-p-butno {
+        text-align: left;
+    }
 }
 
 /*==========================================*/
@@ -339,6 +428,10 @@ footer
 ========================================== 
 */
 footer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: var(--orange);
     color: var(--white);
     display: flex;
@@ -347,6 +440,7 @@ footer {
     text-align: center;
     gap: 1.5em;
     padding: 2em 1em;
+    margin: 4em 0 1.5em;
 }
 
 .ftr-1st-text {

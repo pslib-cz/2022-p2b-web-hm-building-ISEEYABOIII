@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="HM Building.cz s.r.o." content="liberecká stavební společnost">
+    <meta name="keywords" content="html,cheatsheet" />
+    <title>HM Building.cz s.r.o.</title>
+    <link rel="logo" href="media/logo.png">
+    <link type="text/css" rel="stylesheet" href="../styles/main-style.css">
+    <link type="text/css" href="../styles/normalize.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="no-header">
+        <nav class="topnav" id="myTopnav">
+            <div class="topnav-info">
+                <a href="index.html" class="lg"></a>
+                <a class="icon" onclick="myFunction()" id="menu">
+                    <p class="topnav-info-menu">MENU</p>
+                    <img src="../media/lines.svg" style="height: 50px; width: 50px;">
+                </a>
+            </div>
+            <div class="links" id="menu-inside">
+                <a href="#" class="active">DOMŮ</a>
+                <a href="#">SLUŽBY</a>
+                <a href="#">REFERENCE</a>
+                <a href="#">O NÁS</a>
+                <a href="#">KONTAKT</a>
+            </div>
+        </nav>
+
+    </header>
+    <main class="content-wrapper">
+
+        <div class="content-wrapper-info">
+            <h2 class="content-wrapper-info-h">O nás</h2>
+            <p class="content-wrapper-info-p content-wrapper-info-p-butno">
+                Společnost <b>HM Building.cz s.r.o.</b> nabízí své <b>služby ve stavebnictví od roku 2015</b>, a to převážně po <b>Libereckém kraji</b>.
+                <br /><br />
+
+                V oboru pozemního stavitelství <b>provádíme stavbu a rekonstrukci</b>:
+            </p>
+
+            <ul class="content-wrapper__list">
+                <li><span>průmyslových staveb</span></li>
+                <li><span>obytných staveb</span></li>
+                <li><span>staveb občanské vybavenosti</span></li>
+                <li><span>komunikací vozidlových, ale i pěších</span></li>
+            </ul>
+            <p class="content-wrapper-info-p content-wrapper-info-p-butno">
+                Zakázky můžeme řešit tzv. <b>na klíč</b>, kde jsme schopni zajistit dodávky a montáž elektroinstalace NN a VN, zdravotně – technické instalace, ústředního vytápění, vzduchotechniky, MaR, případně jsme schopni, po dohodě s investorem, dodat pouze některou ucelenou část celkové zakázky.
+                <br /><br />
+
+                Naše firma taktéž zajišťuje <b>projekční služby a služby týkající se statického posouzení staveb</b> v oboru pozemního stavitelství a dále jsme schopni zajistit <b>investorsko–inženýrské služby</b>.
+                <br /><br />
+
+                <b>Záruční doba</b> na námi provedená díla se pohybuje od 24 do 60 měsíců.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p class="ftr-1st-text">Plácneme si pro Váš projekt?</p>
+        <p class="ftr-2nd-text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <a class="btn-ftr" href="#">
+            Nezávazně poptat
+        </a>
+    </footer>
+
+
+    <script>
+        var menuIcon = document.getElementById("menu")
+        menuIcon.addEventListener('click', function() {
+            if (document.getElementById("menu-inside").style.display == "flex") {
+                document.getElementById("menu-inside").style.display = "none";
+            } else {
+                document.getElementById("menu-inside").style.display = "flex";
+            }
+        })
+
+        window.addEventListener('click', function(e) {
+            if (document.getElementById("menu-inside").style.display == "flex" &&
+                e.target.id != "menu-inside" &&
+                e.target.id != "menu") {
+                document.getElementById("menu-inside").style.display = "none";
+            }
+        })
+    </script>
+</body></html>
