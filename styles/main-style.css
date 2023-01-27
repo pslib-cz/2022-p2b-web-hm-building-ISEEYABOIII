@@ -363,6 +363,13 @@ content wrapper
     color: black;
 }
 
+.mapa {
+    background-image: radial-gradient(rgb(235, 108, 39, 0.5), rgb(235, 108, 39, 0.5)), url(../media/mapa.jpg);
+    aspect-ratio: 1.62 / 1;
+    background-size: contain;
+    height: 40%;
+}
+
 @media screen and (min-width: 850px) {
 
     .content-wrapper-info {
