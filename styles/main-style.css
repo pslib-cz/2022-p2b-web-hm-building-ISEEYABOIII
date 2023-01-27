@@ -8,6 +8,7 @@
 
 * {
     font-family: 'Open Sans';
+    scroll-behavior: smooth;
 }
 
 .orange {
@@ -89,6 +90,13 @@ navbar
         padding: 0.5em;
     }
 
+    .topnav .links::before {
+        content: "";
+        height: 1em;
+        width: 1em;
+        background-color: white;
+    }
+
     .topnav .links {
         flex-direction: column;
         background-color: var(--orange);
@@ -153,6 +161,8 @@ header {
 
 .header-welcome-info-btn {
     display: none;
+    text-decoration: none;
+    color: white;
 }
 
 .header-welcome-info-name {

@@ -24,25 +24,25 @@
                     <img src="media/lines.svg" style="height: 50px; width: 50px;">
                 </a>
             </div>
-            <div class="links" id="menu-inside">
+            <menu class="links" id="menu-inside">
                 <a href="index.html" class="active">DOMŮ</a>
-                <a id="sluzby" style="cursor: pointer">SLUŽBY</a>
-                <a id="reference" style="cursor: pointer">REFERENCE</a>
+                <a href="./index.html#sluzba">SLUŽBY</a>
+                <a href="./index.html#reference">REFERENCE</a>
                 <a href="pages/o-nas.html">O NÁS</a>
-                <a href="#">KONTAKT</a>
-            </div>
+                <a href="pages/kontakty.html">KONTAKT</a>
+            </menu>
         </nav>
         <div class="header-welcome-info">
-            <p class="header-welcome-info-name">HM Building.cz s.r.o.</p>
+            <h1 class="header-welcome-info-name">HM Building.cz s.r.o.</h1>
             <p class="header-welcome-info-desc">liberecká stavební společnost</p>
-            <a class="header-welcome-info-btn">
+            <a class="header-welcome-info-btn" href="#sluzby">
                 <span>pokračovat</span><img src="media/arrow_back_ios_24px_outlined.svg" style="transform: rotate(-0.25turn)">
             </a>
         </div>
     </header>
     <main class="content-wrapper">
 
-        <div class="content-wrapper-info">
+        <div class="content-wrapper-info" id="sluzby">
             <h2 class="content-wrapper-info-h">Využijte škálu našich <span class="orange">služeb</span></h2>
             <p class="content-wrapper-info-p">Ačkoliv provádíme především <b>průmyslové</b> stavby, není pro nás problém postavit Vám <b>rodinný domek na klíč</b>, nebo jen hrubou stavbu. Nejsou nám cizí ani <b>rekonstrukce budov</b> a jejich údržba a to včetně okolních ploch.</p>
         </div>
@@ -91,7 +91,7 @@
             <h2 class="content-wrapper-info-h">Rádi vám ukážeme naše <span class="orange">reference</span></h2>
             <p class="content-wrapper-info-p">Stojí za námi <b>kvalitně vyhotovené zakázky</b> dle konkrétních požadavků zadavatelů <b>podepřené letitými zkušenostmi ve stavebnictví</b>. To, že <b>obrátit se na právě nás je vhodná volba potvrdí naši klienti</b>, na jejichž stavbách jsme zanechali náš rukopis. Reference jsou jen zlomkem naší práce, za kterou se rozhodně nestydíme.</p>
         </div>
-        <div class="content-wrapper-reference" id="referenc">
+        <div class="content-wrapper-reference" id="reference">
             <a class="content-wrapper-reference-item" href="#">
                 <img src="media/reference/reference-hasicska-zbrojnice-600w.jpg" class="content-wrapper-reference-item__img">
                 <h4 class="content-wrapper-reference-item__header">Hasičská zbrojnice</h4>
@@ -139,25 +139,5 @@
                 document.getElementById("menu-inside").style.display = "none";
             }
         })
-
-
-        document.getElementById("sluzby").addEventListener("click", () => {
-            var scrollDiv = document.getElementById("sluzba").offsetTop;
-            window.scrollTo({
-                top: scrollDiv,
-                behavior: 'smooth'
-            });
-        });
-
-        document.getElementById("reference").addEventListener("click", () => {
-            var scrollDiv = document.getElementById("referenc").offsetTop;
-            window.scrollTo({
-                top: scrollDiv,
-                behavior: 'smooth'
-            });
-        });
-
     </script>
-</body>
-
-</html>
+</body></html>
