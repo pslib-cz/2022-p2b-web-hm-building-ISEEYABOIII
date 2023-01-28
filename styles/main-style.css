@@ -363,12 +363,66 @@ content wrapper
     color: black;
 }
 
+.content-wrapper-info-p-butno {
+    text-align: left;
+}
+
+.content-wrapper-info-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    grid-column: 2/3;
+    align-items: center;
+}
+
+.content-wrapper-info-contacts__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content-wrapper-info-contacts__item a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: 600;
+    gap: 1em;
+}
+
 .mapa {
-    background-image: radial-gradient(rgb(235, 108, 39, 0.5), rgb(235, 108, 39, 0.5)), url(../media/mapa.jpg);
+    background-image: url(../media/mapa.jpg);
     aspect-ratio: 1.62 / 1;
     background-size: contain;
-    height: 40%;
+    width: 100vw;
+    margin-left: -10%;
+    margin-right: -10%;
 }
+
+.content-wrapper-info__icon {
+    aspect-ratio: 1/1;
+    width: 1.5em;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--orange);
+    border-radius: 50px;
+}
+
+.content-wrapper-info__input {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.input-box {
+    border: 1px solid var(--orange);
+    padding: 0.8em;
+}
+
+.input-box_big {}
 
 @media screen and (min-width: 850px) {
 
@@ -442,8 +496,33 @@ content wrapper
         font-size: 1.5em;
     }
 
-    .content-wrapper-info-p-butno {
-        text-align: left;
+    .content-wrapper-info-contacts {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    .content-wrapper-info-contacts__item {
+        width: 100%;
+    }
+
+    .mapa {
+        background-image: radial-gradient(rgb(235, 108, 39, 0.5), rgb(235, 108, 39, 0.5)), url(../media/mapa.jpg);
+        aspect-ratio: 1.62 / 1;
+        width: 1714px;
+        height: 577px;
+        margin: 0;
+    }
+
+    .content-wrapper-info__icon {
+        aspect-ratio: 1/1;
+        width: 1.5em;
+        display: flex;
+        padding: 1em;
+        justify-content: center;
+        align-content: center;
+        background-color: var(--orange);
+        border-radius: 50px;
     }
 }
 
