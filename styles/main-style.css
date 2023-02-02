@@ -326,6 +326,7 @@ content wrapper
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .content-wrapper-reference-item {
@@ -417,7 +418,7 @@ content wrapper
     display: flex;
     flex-direction: column;
     gap: 1em;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .input-box {
@@ -428,7 +429,6 @@ content wrapper
 .input-box_big {}
 
 .content-wrapper-info_images {
-    display: grid;
     grid-auto-columns: repeat(auto-fit, 320px);
     grid-auto-rows: auto;
     grid-gap: 1em;
@@ -543,6 +543,10 @@ content wrapper
         background-color: var(--orange);
         border-radius: 50px;
     }
+
+    .content-wrapper-info__input {
+        max-width: 50%;
+    }
 }
 
 /*==========================================*/
@@ -555,7 +559,7 @@ footer
 ========================================== 
 */
 footer {
-    position:relative;
+    position: relative;
     bottom: 0;
     right: 0;
     left: 0;
