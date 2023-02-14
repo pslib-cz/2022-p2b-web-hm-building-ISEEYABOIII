@@ -6,7 +6,7 @@
     --white: #FFFFFF;
 }
 
-* {
+html {
     font-family: 'Open Sans';
     scroll-behavior: smooth;
 }
@@ -41,6 +41,7 @@ navbar
     display: inline-flex;
     list-style: none;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .topnav .links a {
@@ -53,7 +54,7 @@ navbar
     padding: 0 1.5em;
     font-weight: 500;
     font-size: 1em;
-    line-height: 22px;
+    line-height: 1.375em;
     text-transform: uppercase;
 }
 
@@ -119,7 +120,7 @@ navbar
     .topnav .links a {
         color: white;
         text-decoration: underline;
-        font-size: 16px;
+        font-size: 1em;
         padding: 1.5em;
     }
 
@@ -172,6 +173,7 @@ header {
 }
 
 .header-welcome-info-btn {
+    display: inline-block;
     display: none;
     text-decoration: none;
     color: white;
@@ -238,6 +240,7 @@ content wrapper
     justify-content: center;
     text-align: left;
     padding-top: 1em;
+    padding-bottom: 1em;
     grid-row-gap: 1em;
 }
 
@@ -264,17 +267,16 @@ content wrapper
 }
 
 .content-wrapper-combs__img {
-    height: 310px;
-    width: 100%;
-    object-fit: cover;
+    width: 50%;
     border-radius: 0 30px;
+    overflow: hidden;
 }
 
 .content-wrapper-combes__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 50%;
 }
 
 .content-wrapper-combs__header {
@@ -285,12 +287,12 @@ content wrapper
 
 .content-wrapper-combs__desc {
     font-size: 1em;
-    line-height: 22px;
+    line-height: 1.375em;
 }
 
 .content-wrapper-combs__btn {
+    display: inline-block;
     padding: 0.5em;
-    width: 8em;
     font-size: 1.2em;
     text-align: center;
     text-decoration: none;
@@ -314,6 +316,7 @@ content wrapper
 }
 
 .content-wrapper-infostoppper__btn {
+    display: inline-block;
     background-color: var(--orange);
     font-weight: 700;
     padding: 1em 2em;
@@ -558,8 +561,7 @@ content wrapper
 footer
 ========================================== 
 */
-footer {
-    position: relative;
+.footer {
     bottom: 0;
     right: 0;
     left: 0;
@@ -570,8 +572,9 @@ footer {
     align-items: center;
     text-align: center;
     gap: 1.5em;
-    padding: 2em 1em;
-    margin: 4em 0 1.5em;
+    margin: 0 0 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .ftr-1st-text {
@@ -587,6 +590,7 @@ footer {
 }
 
 .btn-ftr {
+    display: inline-block;
     background-color: var(--white);
     border: none;
     color: var(--orange);
@@ -596,7 +600,7 @@ footer {
 }
 
 @media screen and (min-width: 850px) {
-    footer {
+    .footer {
         padding: 2em 0;
     }
 
@@ -614,3 +618,10 @@ footer {
 }
 
 /*==========================================*/
+
+.image-responsive {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
