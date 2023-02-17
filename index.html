@@ -19,12 +19,12 @@
         <nav class="topnav" id="myTopnav">
             <div class="topnav-info">
                 <a href="index.html" class="lg"></a>
-                <a class="icon" onclick="myFunction()" id="menu">
+                <a class="icon" id="menu">
                     <p class="topnav-info-menu" id="menu">MENU</p>
                     <img src="media/lines.svg" style="height: 50px; width: 50px;" id="menu" alt="menu">
                 </a>
             </div>
-            <menu class="links" id="menu-inside">
+            <menu class="links links" id="menu-inside">
                 <li><a href="index.html" class="active">Domů</a></li>
                 <li><a href="./index.html#sluzba">Služby</a></li>
                 <li><a href="./index.html#reference">Reference</a></li>
@@ -126,24 +126,23 @@
 
 
     <script>
-        var menuIcon = document.getElementById("menu")
+        var menuIcon = document.getElementById("menu");
+        var menuInside = document.getElementById("menu-inside");
+
         menuIcon.addEventListener('click', function() {
-            if (document.getElementById("menu-inside").style.display == "flex") {
-                document.getElementById("menu-inside").style.display = "none";
+            if (menuInside.classList.contains("links-open")) {
+                menuInside.className = "links";
             } else {
-                document.getElementById("menu-inside").style.display = "flex";
+                menuInside.className = "links-open";
             }
-        })
+        });
 
         window.addEventListener('click', function(e) {
-            if (document.getElementById("menu-inside").style.display == "flex" &&
+            if (menuInside.classList.contains("links-open") &&
                 e.target.id != "menu-inside" &&
                 e.target.id != "menu") {
-                document.getElementById("menu-inside").style.display = "none";
+                menuInside.className = "links";
             }
-        })
-
+        });
     </script>
-</body>
-
-</html>
+</body></html>
